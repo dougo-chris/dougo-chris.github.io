@@ -16,9 +16,10 @@ avatar:           /theme/img/avatar.jpg  # Path to an avatar image
 baseurl: ""
 
 # Add a directory to hold misc pages, just to keep the root directory clean.
-include: ["_pages", "_projects", "_gists"]
+include: ["_content"]
 
 # Turn the projects & gists into a collections.
+collections_dir: _content
 collections:
   projects:
     output: true
