@@ -9,7 +9,7 @@
             Technology
           </div>
           <div id="filterSet" style="display:none">
-            <a class="d-inline-block bg-white border rounded p-1 pl-2 pr-2 pl-3 pr-3 text-default" href="#">
+            <a class="d-inline-block bg-white border rounded p-1 pl-3 pr-3 text-default" href="#">
               Reset Filter
             </a>
           </div>
@@ -18,7 +18,7 @@
       </div>
       {% for skill in group_names %}
         <div class="clearfix">
-          <a class="d-inline-block bg-white border rounded p-1 pl-2 pr-2 mr-1 mb-1 skill skill-{{ skill | slugify }}"
+          <a class="d-inline-block bg-white border rounded p-1 pl-2 pr-2 mb-1 skill skill-{{ skill | slugify }}"
               href="#{{ skill | slugify }}"
               data-skill="{{ skill | slugify }}">
             {{skill}}

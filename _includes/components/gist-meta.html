@@ -3,7 +3,7 @@
     <div class="card-body p-2">
       {% for tag in page.tags %}
         <div class="clearfix">
-          <a class="bg-white border rounded p-1 mr-2 mb-2 d-inline-block"
+          <a class="bg-white border p-1 pl-2 pr-2 mb-1 tag"
               href="{{ site.baseurl }}{% link list/gists.html %}#{{ tag | slugify }}"
               data-tag="{{ tag | slugify }}">
             {{ tag }}

@@ -11,7 +11,7 @@
       </div>
       {% for skill in page.skills %}
         <div class="clearfix">
-          <a class="bg-white border rounded p-1 mr-1 mb-1 d-inline-block"
+          <a class="bg-white border rounded p-1 pl-2 pr-2 mb-1 skill"
               href="{{ site.baseurl }}{% link list/projects.html %}#{{ skill | slugify }}"
               data-skill="{{ skill | slugify }}">
             {{ skill }}

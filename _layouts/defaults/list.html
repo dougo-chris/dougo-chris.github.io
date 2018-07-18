@@ -3,7 +3,14 @@ layout: default
 ---
 
 <h5 class="list-title border border-left-0 border-right-0 py-2">
-  {{ page.title }}
+  <div class="clearfix">
+    <div class="float-left">
+      {{ page.title }}
+    </div>
+    <div class="float-right">
+      <div id="subheader"/>
+    </div>
+  </div>
 </h5>
 
 {{ content }}
