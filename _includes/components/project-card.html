@@ -1,20 +1,13 @@
 <div class="card card-project w-100 border-top-0 border-left-0 border-right-0 rounded-0 mb-3">
   <div class="card-body px-0 pt-0 pb-2">
     <h4 class="card-title mb-2">
-      <a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a>
+      {% if project.more %}
+        <a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a>
+      {% else %}
+        {{ project.title }}
+      {% endif %}
       <span class="badge badge-success float-right">{{ project.duration }}</span>
     </h4>
-    <div class="card-text d-flex">
-      <div class="ml-3">
-        {% for skill in project.skills %}
-          <a class="d-inline-block border rounded p-1 pl-2 pr-2 mr-1 mb-1 skill skill-{{ skill | slugify}}"
-              href="{{ site.baseurl }}{% link list/projects.html %}#{{skill | slugify}}"
-              data-skill="{{ skill | slugify }}">
-            {{skill}}
-          </a>
-        {% endfor %}
-      </div>
-    </div>
     <h6 class="card-subtitle mt-1 mb-2 text-secondary">
       {{ project.role }}
     </h6>
@@ -23,8 +16,22 @@
         <span>
           {{ project.headline }}
         </span>
-        <a class="ml-2" href="{{ site.baseurl }}{{ project.url }}">More...</a>
+        {% if project.more %}
+          <a class="ml-2" href="{{ site.baseurl }}{{ project.url }}">More...</a>
+        {% endif %}
       </strong>
+    </div>
+
+    <div class="card-text d-flex">
+      <div class="ml-3 mt-2">
+        {% for skill in project.skills %}
+          <a class="d-inline-block border rounded p-1 pl-2 pr-2 mr-1 mb-1 skill skill-{{ skill | slugify}}"
+              href="{{ site.baseurl }}{% link list/projects.html %}#{{skill | slugify}}"
+              data-skill="{{ skill | slugify }}">
+            {{skill}}
+          </a>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>

@@ -1,6 +1,7 @@
 ---
 title: Wayne Enterprises
 headline: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+more: false
 duration: Jan 2016
 role: Chief Architect
 skills:

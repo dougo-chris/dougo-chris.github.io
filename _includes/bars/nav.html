@@ -1,8 +1,14 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dougo fixed-top justify-content-between">
-  <a class="navbar-brand font-weight-bold" href="{{ site.baseurl }}{% link _pages/index.md %}">{{site.name}}</a>
+  <a class="navbar-brand font-weight-bold ml-2" href="{{ site.baseurl }}{% link _pages/index.md %}">
+    Building Software
+  </a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarContent" >
     <span class="navbar-toggler-icon"></span>
   </button>
+  <em class="navbar-tagline text-white ml-5">
+
+  </em>
+
   <div class="collapse navbar-collapse" id="navbarContent">
     <ul class="navbar-nav ml-auto">
       {% for item in site.data.nav %}

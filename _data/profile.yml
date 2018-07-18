@@ -14,6 +14,10 @@
   href: http://dougo-chris.com
   icon: entypo/rss.svg
 
-- caption: Melbourne - Australia
-  href: https://www.google.com/maps/place/Melbourne+VIC/@-37.971237,144.4926947,9z/data=!3m1!4b1!4m5!3m4!1s0x6ad646b5d2ba4df7:0x4045675218ccd90!8m2!3d-37.8136276!4d144.9630576
-  icon: entypo/location-pin.svg
+- caption: Email
+  href: mailto:dougo.chris@gmail.com
+  icon: entypo/email.svg
+
+# - caption: Melbourne
+#   href: https://www.google.com/maps/place/Melbourne+VIC/@-37.971237,144.4926947,9z/data=!3m1!4b1!4m5!3m4!1s0x6ad646b5d2ba4df7:0x4045675218ccd90!8m2!3d-37.8136276!4d144.9630576
+#   icon: entypo/location-pin.svg

@@ -18,7 +18,7 @@
       </div>
       {% for tag in group_names %}
         <div class="clearfix">
-          <a class="d-inline-block bg-white border rounded p-1 pl-2 pr-2 mb-1 tag tag-{{ tag | slugify }}"
+          <a class="d-block bg-white border rounded p-1 pl-2 pr-2 mb-1 tag tag-{{ tag | slugify }}"
               href="#{{tag | slugify}}"
               data-tag="{{tag | slugify}}">
             {{ tag }}
