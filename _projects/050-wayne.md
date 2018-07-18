@@ -1,6 +1,7 @@
 ---
 title: Wayne Enterprises
-duration: Jan 2016 - present
+headline: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+duration: Jan 2016
 role: Chief Architect
 skills:
   - Team Leadership

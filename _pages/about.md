@@ -1,12 +1,10 @@
 ---
+title: Chris Douglas - Technology
+subtitle: Software and Technology
 layout: defaults/page
 permalink: about.html
-narrow: true
+fluid: true
 ---
-
-{% include components/intro.md %}
-
-<hr />
 
 The about page allows you to expand a bit more on the intro. Add some more information here about your skills, experience, etc.
 

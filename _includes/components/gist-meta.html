@@ -1,18 +1,10 @@
 <div class="sticky-top space-before">
   <div class="card bg-light">
     <div class="card-body p-2">
-      <div class="card-title">
-        <div class="mt-1 pl-3 pr-3">
-          <h5>
-            {{ page.date | date_to_string }}
-          </h5>
-        </div>
-        <hr/>
-      </div>
       {% for tag in page.tags %}
         <div class="clearfix">
           <a class="bg-white border rounded p-1 mr-2 mb-2 d-inline-block"
-              href="{{ site.baseurl }}{% link list/posts.html %}#{{ tag | slugify }}"
+              href="{{ site.baseurl }}{% link list/gists.html %}#{{ tag | slugify }}"
               data-tag="{{ tag | slugify }}">
             {{ tag }}
           </a>
@@ -22,7 +14,7 @@
         <span class="icon grey mr-1">
           {% include entypo/arrow-left.svg %}
         </span>
-        <a href="{{ site.baseurl }}{% link list/posts.html %}">All posts</a>
+        <a href="{{ site.baseurl }}{% link list/gists.html %}">All gists</a>
       </div>
     </div>
   </div>

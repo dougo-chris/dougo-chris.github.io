@@ -7,27 +7,27 @@ highlighter:      rouge
 excerpt_separator: <!--more-->
 
 # Config for your profile.
-title:            friday-theme.github.io  # Site title
-name:             John Smith              # Your name
-avatar:           /theme/img/avatar.jpg   # Path to an avatar image
+title:            Software For The Rest Of Us  # Site title
+name:             Chris Douglas          # Your name
+avatar:           /theme/img/avatar.jpg  # Path to an avatar image
 
 # The theme uses the baseurl throughout, which is useful for running the entire
 # site under a subdir, like for this GitHub Pages deployment as a project site.
-baseurl: "/friday-theme"
+baseurl: ""
 
 # Add a directory to hold misc pages, just to keep the root directory clean.
-include: ["_pages", "_portfolio"]
+include: ["_pages", "_projects", "_gists"]
 
-# Turn the projects into a collection.
+# Turn the projects & gists into a collections.
 collections:
   projects:
     output: true
-    title: Projects
+    title: projects
     permalink: /:collection/:name.html
-  portfolio:
+  gists:
     output: true
-    title: portfolio
-    permalink: /:collection/:name.html
+    title: gists
+    permalink: /collection/:name.html
 
 defaults:
 # Turn the profile sidebar on for all pages by default, except for the
@@ -42,16 +42,16 @@ defaults:
       show_profile: true
   -
     scope:
+      path: "list"
+    values:
+      show_profile: false
+      layout: defaults/list
+  -
+    scope:
       path: "_posts"
     values:
       show_profile: false
       layout: defaults/post
-  -
-    scope:
-      path: "_portfolio"
-    values:
-      show_profile: false
-      layout: defaults/portfolio
   -
     scope:
       path: "_projects"
@@ -60,9 +60,7 @@ defaults:
       layout: defaults/project
   -
     scope:
-      path: "list"
+      path: "_gists"
     values:
       show_profile: false
-      layout: defaults/list
-
-
+      layout: defaults/gist

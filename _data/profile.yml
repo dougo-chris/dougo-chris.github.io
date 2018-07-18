@@ -1,20 +1,19 @@
-- caption: Friday Theme on GitHub
-  href: https://github.com/sfreytag/friday-theme
+- caption: GitHub
+  href: https://github.com/dougo-chris
   icon: entypo/github.svg
 
-- caption: Stack Overflow
-  href: https://stackoverflow.com
-  icon: icons/stackoverflow.svg
-
-- caption: Facebook
-  href: https://www.facebook.com
-  icon: entypo/facebook.svg
+- caption: LinkedIn
+  href: https://www.linkedin.com/in/dougo-chris
+  icon: entypo/linkedin.svg
 
 - caption: Twitter
-  href: https://www.twitter.com
+  href: https://www.twitter.com/dougo_chris
   icon: entypo/twitter.svg
 
-- caption: London
-  href: https://www.google.co.uk/maps/place/London/@51.528308,-0.3817765,10z/data=!3m1!4b1!4m5!3m4!1s0x47d8a00baf21de75:0x52963a5addd52a99!8m2!3d51.5073509!4d-0.1277583
-  icon: entypo/location-pin.svg
+- caption: Blog
+  href: http://dougo-chris.com
+  icon: entypo/rss.svg
 
+- caption: Melbourne - Australia
+  href: https://www.google.com/maps/place/Melbourne+VIC/@-37.971237,144.4926947,9z/data=!3m1!4b1!4m5!3m4!1s0x6ad646b5d2ba4df7:0x4045675218ccd90!8m2!3d-37.8136276!4d144.9630576
+  icon: entypo/location-pin.svg

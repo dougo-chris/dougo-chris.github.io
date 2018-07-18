@@ -1,0 +1,89 @@
+---
+title:  Projects & Work
+show_skills: true
+permalink: list/projects.html
+---
+
+<div id="currentSkill" style="display:none">
+  <span> Technology : </span>
+  <span class="border-btm p-2 mr-2 bg-light text-secondary" id="activeSkill"></span>
+</div>
+
+{% assign sorted = site.projects | reverse %}
+{% for project in sorted %}
+  {% include components/project-card.html %}
+{% endfor %}
+
+<script type="text/javascript">
+
+  var parseHash = function() {
+    if (document.location.hash.length > 0) {
+      var skill = document.location.hash.slice(1)
+      var name = $(".skill-" + skill).first().text()
+      showPortfolioBySkill(skill, name)
+    }
+    else {
+      clearSkills()
+    }
+  }
+
+  $(document).ready(function(){
+    var content = $("#currentSkill").html();
+    $("#currentSkill").remove();
+    $("#subheader").html(content);
+
+    var currentSkill = null;
+
+    $('a.skill').click(function(evt) {
+      var skill = $(evt.currentTarget).data('skill');
+      if (skill == currentSkill) {
+        currentSkill = null;
+        clearSkills();
+        return false;
+      }
+      else {
+        currentSkill = skill;
+        return true;
+      }
+    });
+
+    parseHash();
+  });
+
+  $(window).on('hashchange', parseHash)
+
+  var showPortfolioBySkill = function(skill, name) {
+    $("#subheader").show()
+    $("#filterUnset").hide();
+    $("#filterSet").show();
+
+    $(".card-project").hide()
+    $(".skill").removeClass("bg-success")
+                .addClass("bg-white")
+                .removeClass("text-white")
+    $(".card-project").each(function(idx, card) {
+      var matches = $(card).find(".skill-" + skill)
+      if (matches.length > 0) $(card).show()
+    })
+    $(".skill-" + skill).removeClass("bg-white")
+                        .addClass("bg-success")
+                        .addClass("text-white")
+                        .blur()
+    $("#activeSkill").html(name)
+  }
+
+    var clearSkills = function() {
+    $("#subheader").hide()
+    $("#filterUnset").show();
+    $("#filterSet").hide();
+      $("#currently-showing").hide()
+      $(".card-project").show()
+      $(".skill").removeClass("bg-success")
+                  .addClass("bg-white")
+                  .removeClass("text-white")
+      document.location.hash = ""
+    }
+
+</script>
+
+

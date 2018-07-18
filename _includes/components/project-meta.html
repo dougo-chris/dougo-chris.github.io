@@ -1,19 +1,29 @@
 <div class="sticky-top space-before">
-    <div class="card bg-light mb-3 space-before">
-        <div class="card-body">
-            <div class="card-title">
-                <h5>On This Page</h5>
-            </div>
-            <ul class="nav flex-column nav-pills header-list">
-            </ul>
-            <div class="d-flex align-items-center mt-2">
-                <span class="icon grey mr-1">
-                    {% include entypo/arrow-left.svg %}
-                </span>
-                <a href="{{ site.baseurl }}{% link list/projects.md %}">Back to all projects</a>
-            </div>
+  <div class="card bg-light">
+    <div class="card-body p-2">
+      <div class="card-title">
+        <div class="mt-1 pl-3 pr-3">
+          <h5>
+            {{ page.duration }}
+          </h5>
         </div>
+        <hr/>
+      </div>
+      {% for skill in page.skills %}
+        <div class="clearfix">
+          <a class="bg-white border rounded p-1 mr-1 mb-1 d-inline-block"
+              href="{{ site.baseurl }}{% link list/projects.html %}#{{ skill | slugify }}"
+              data-skill="{{ skill | slugify }}">
+            {{ skill }}
+          </a>
+        </div>
+      {% endfor %}
+      <div class="d-flex align-items-center mt-2">
+        <span class="icon grey mr-1">
+          {% include entypo/arrow-left.svg %}
+        </span>
+        <a href="{{ site.baseurl }}{% link list/projects.html %}">All projects</a>
+      </div>
     </div>
+  </div>
 </div>
-
-

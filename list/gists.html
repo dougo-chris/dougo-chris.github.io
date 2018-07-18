@@ -1,28 +1,29 @@
 ---
-title: Blog Posts & Articles
-show_tags: true
-permalink: list/posts.html
+title:  Gists
+show_gists: true
+permalink: list/gists.html
 ---
 
 <div id="currentTag" style="display:none">
-  <span> Filter By : </span>
+  <span> Tags : </span>
   <span class="border-btm p-2 mr-2 bg-light text-secondary" id="activeTag"></span>
 </div>
 
-{% for post in site.posts %}
-  {% include components/post-card.html %}
+{% assign sorted = site.gists | reverse %}
+{% for gist in sorted %}
+  {% include components/gist-card.html %}
 {% endfor %}
 
 <script type="text/javascript">
 
   var parseHash = function() {
     if (document.location.hash.length > 0) {
-    var tag = document.location.hash.slice(1)
-      var name = $(".tag-" + tag).first().text();
-      showPostByTag(tag, name);
+      var tag = document.location.hash.slice(1)
+      var name = $(".tag-" + tag).first().text()
+      showPortfolioByTag(tag, name)
     }
     else {
-      clearTags();
+      clearTags()
     }
   }
 
@@ -49,36 +50,40 @@ permalink: list/posts.html
     parseHash();
   });
 
-  $(window).on('hashchange', parseHash);
+  $(window).on('hashchange', parseHash)
 
-  var showPostByTag = function(tag, name) {
+  var showPortfolioByTag = function(tag, name) {
     $("#subheader").show()
     $("#filterUnset").hide();
     $("#filterSet").show();
-    $(".card-post").hide()
+
+    $(".card-gist").hide()
     $(".tag").removeClass("bg-success")
-              .addClass("bg-white")
-              .removeClass("text-white")
-    $(".card-post").each(function(idx, card) {
+                .addClass("bg-white")
+                .removeClass("text-white")
+    $(".card-gist").each(function(idx, card) {
       var matches = $(card).find(".tag-" + tag)
       if (matches.length > 0) $(card).show()
     })
     $(".tag-" + tag).removeClass("bg-white")
-                      .addClass("bg-success")
-                      .addClass("text-white")
-                      .blur()
+                        .addClass("bg-success")
+                        .addClass("text-white")
+                        .blur()
     $("#activeTag").html(name)
   }
 
-  var clearTags = function() {
+    var clearTags = function() {
     $("#subheader").hide()
     $("#filterUnset").show();
     $("#filterSet").hide();
-    $(".card-post").show()
-    $(".tag").removeClass("bg-success")
-               .addClass("bg-white")
-               .removeClass("text-white")
-    document.location.hash = ""
-  }
+      $("#currently-showing").hide()
+      $(".card-gist").show()
+      $(".tag").removeClass("bg-success")
+                  .addClass("bg-white")
+                  .removeClass("text-white")
+      document.location.hash = ""
+    }
 
 </script>
+
+

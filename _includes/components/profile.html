@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2 col-xl-2 side">
+      <div class="card bg-light">
+        <div class="card-body text-center">
+          {% include components/profile-avatar.html %}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 col-lg-7 col-xl-7 pb-4 content">
+      <h1 class="border border-top-0 border-right-0 border-left-0 mb-4 pb-2">
+        {{ site.name }}
+      </h1>
+      {% include components/profile-intro.md %}
+
+    </div>
+    <div class="d-none d-lg-block col-lg-3 col-xl-3 side">
+      <div class="card bg-light mt-3">
+        <div class="card-body text-center">
+          {% include components/profile-body.html %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

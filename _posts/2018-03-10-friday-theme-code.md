@@ -20,7 +20,7 @@ Code blocks are wrapped in the `highlight` liquid tag together with a keyword to
 {% endhighlight %}
 {% endraw %}
 {% endhighlight %}
- 
+
 ## Examples
 
 ### JavaScript
@@ -38,9 +38,9 @@ var modularpattern = (function() {
             return sum;
         },
         reset:function() {
-            return sum = 0;    
-        }  
-    }   
+            return sum = 0;
+        }
+    }
 }());
 alert(modularpattern.add());    // alerts: 1
 alert(modularpattern.add());    // alerts: 2
@@ -60,7 +60,7 @@ class Employee:
       self.name = name
       self.salary = salary
       Employee.empCount += 1
-   
+
    def displayCount(self):
      print "Total Employee %d" % Employee.empCount
 

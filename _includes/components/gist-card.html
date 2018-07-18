@@ -1,0 +1,25 @@
+<div class="card card-gist w-100 border-top-0 border-left-0 border-right-0 rounded-0 mb-4">
+  <div class="card-body px-0 pt-0">
+    <div class="float-left">
+      <h4 class="card-title">
+        {{ gist.title }}
+      </h4>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="card-text d-flex align-items-center mb-2">
+      <div>
+        {% for tag in gist.tags %}
+          <a class="d-inline-block bg-white border rounded p-1 pl-2 pr-2 mr-1 mb-1 tag tag-{{ tag | slugify }}"
+              href="{{ site.baseurl }}{% link list/gists.html %}#{{tag | slugify}}"
+              data-tag="{{ tag | slugify }}">
+            {{ tag }}
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="card-text mb-0">
+      {{ gist.content }}
+    </div>
+  </div>
+</div>
