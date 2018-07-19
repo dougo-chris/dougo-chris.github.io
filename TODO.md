@@ -22,8 +22,9 @@
 ### Gists
 - 001-underscore-keys : - Underscore Keys
 - 002-erlang-reliability : https://dockyard.com/blog/2018/07/18/all-for-reliability-reflections-on-the-erlang-thesis
+- 003-timezone : - Timezone
+
 #### TODO
-- Timezone
 - Loggers with scope
 - Zipfiles
 - Backup to EC2
