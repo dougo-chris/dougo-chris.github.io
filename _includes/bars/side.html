@@ -6,6 +6,10 @@
   {% include components/work-meta.html %}
 {% endif %}
 
+{% if page.path contains '_gists' %}
+  {% include components/gist-meta.html %}
+{% endif %}
+
 {% if page.show_tags %}
   {% include components/all-tags.html %}
 {% endif %}

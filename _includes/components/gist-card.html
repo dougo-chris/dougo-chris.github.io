@@ -2,7 +2,7 @@
   <div class="card-body px-0 pt-0">
     <div class="float-left">
       <h4 class="card-title">
-        {{ gist.title }}
+        <a href="{{ gist.url | absolute_url }}">{{ gist.title }}</a>
       </h4>
     </div>
     <div class="clearfix"></div>
@@ -19,7 +19,8 @@
       </div>
     </div>
     <div class="card-text mb-0">
-      {{ gist.content }}
+      {{ gist.excerpt }}
     </div>
+    <a href="{{ gist.url | absolute_url }}">More...</a>
   </div>
 </div>

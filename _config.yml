@@ -7,7 +7,7 @@ highlighter:      rouge
 excerpt_separator: <!--more-->
 
 # Config for your profile.
-title:            Chris Douglas - Elixir Developer  # Site title
+title:            Chris Douglas - Elixir & Ruby Developer  # Site title
 name:             Chris Douglas          # Your name
 avatar:           /theme/img/avatar.jpg  # Path to an avatar image
 
@@ -22,11 +22,11 @@ collections:
   work:
     output: true
     title: work
-    # permalink: /:collection/:title.html
+    permalink: /:collection/:title.html
   gists:
     output: true
     title: gists
-    # permalink: /collection/:name.html
+    permalink: /collection/:title.html
 
 defaults:
 # Turn the profile sidebar on for all pages by default, except for the

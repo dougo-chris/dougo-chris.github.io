@@ -75,6 +75,12 @@ h2[id]::before {
     margin-top: -80px;
 }
 
+h3 {
+  color: #34495e;
+  padding-top: 10px;
+  margin-bottom: 5px;
+}
+
 h4 {
   font-weight: bolder;
 }
