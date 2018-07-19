@@ -58,6 +58,9 @@ body {
 .navbar-tagline {
   font-size: 18px;
 }
+.navbar-nav .nav-item{
+  margin-left: 10px;
+}
 
 h2[id]::before {
     display: block;

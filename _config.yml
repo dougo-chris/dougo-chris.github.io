@@ -7,23 +7,21 @@ highlighter:      rouge
 excerpt_separator: <!--more-->
 
 # Config for your profile.
-title:            Software For The Rest Of Us  # Site title
+title:            Chris Douglas - Elixir Developer  # Site title
 name:             Chris Douglas          # Your name
 avatar:           /theme/img/avatar.jpg  # Path to an avatar image
 
-# The theme uses the baseurl throughout, which is useful for running the entire
-# site under a subdir, like for this GitHub Pages deployment as a project site.
 baseurl: ""
 
 # Add a directory to hold misc pages, just to keep the root directory clean.
 include: ["_content"]
 
-# Turn the projects & gists into a collections.
+# Turn the work & gists into a collections.
 collections_dir: _content
 collections:
-  projects:
+  work:
     output: true
-    title: projects
+    title: work
     # permalink: /:collection/:title.html
   gists:
     output: true
@@ -55,10 +53,10 @@ defaults:
       layout: defaults/post
   -
     scope:
-      path: "_projects"
+      path: "_work"
     values:
       show_profile: false
-      layout: defaults/project
+      layout: defaults/work
   -
     scope:
       path: "_gists"

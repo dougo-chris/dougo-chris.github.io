@@ -12,7 +12,7 @@
       {% for skill in page.skills %}
         <div class="clearfix">
           <a class="d-block bg-white border rounded p-1 pl-2 pr-2 mb-1 skill"
-              href="{{ site.baseurl }}{% link list/projects.html %}#{{ skill | slugify }}"
+              href="{{ site.baseurl }}{% link list/work.html %}#{{ skill | slugify }}"
               data-skill="{{ skill | slugify }}">
             {{ skill }}
           </a>
@@ -22,7 +22,7 @@
         <span class="icon grey mr-1">
           {% include entypo/arrow-left.svg %}
         </span>
-        <a href="{{ site.baseurl }}{% link list/projects.html %}">All Projects</a>
+        <a href="{{ site.baseurl }}{% link list/work.html %}">All Projects</a>
       </div>
     </div>
   </div>

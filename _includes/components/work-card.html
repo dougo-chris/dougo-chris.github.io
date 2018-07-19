@@ -1,0 +1,37 @@
+<div class="card card-work w-100 border-top-0 border-left-0 border-right-0 rounded-0 mb-3">
+  <div class="card-body px-0 pt-0 pb-2">
+    <h4 class="card-title mb-2">
+      {% if work.more %}
+        <a href="{{ site.baseurl }}{{ work.url }}">{{ work.title }}</a>
+      {% else %}
+        {{ work.title }}
+      {% endif %}
+      <span class="badge badge-success float-right">{{ work.duration }}</span>
+    </h4>
+    <h6 class="card-subtitle ml-3 mt-1 mb-2 text-secondary">
+      {{ work.role }}
+    </h6>
+    <div class="card-text ml-3 mt-1 mb-0">
+      <strong>
+        <span>
+          {{ work.headline }}
+        </span>
+        {% if work.more %}
+          <a class="ml-2" href="{{ site.baseurl }}{{ work.url }}">More...</a>
+        {% endif %}
+      </strong>
+    </div>
+
+    <div class="card-text d-flex">
+      <div class="ml-3 mt-2">
+        {% for skill in work.skills %}
+          <a class="d-inline-block border rounded p-1 pl-2 pr-2 mr-1 mb-1 skill skill-{{ skill | slugify}}"
+              href="{{ site.baseurl }}{% link list/work.html %}#{{skill | slugify}}"
+              data-skill="{{ skill | slugify }}">
+            {{skill}}
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

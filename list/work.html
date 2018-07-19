@@ -1,7 +1,7 @@
 ---
-title:  Projects & Work
+title:  Work History
 show_skills: true
-permalink: list/projects.html
+permalink: list/work.html
 ---
 
 <div id="currentSkill" style="display:none">
@@ -9,9 +9,9 @@ permalink: list/projects.html
   <span class="border-btm p-2 bg-light text-secondary" id="activeSkill"></span>
 </div>
 
-{% assign sorted = site.projects | reverse %}
-{% for project in sorted %}
-  {% include components/project-card.html %}
+{% assign sorted = site.work | reverse %}
+{% for work in sorted %}
+  {% include components/work-card.html %}
 {% endfor %}
 
 <script type="text/javascript">
@@ -57,11 +57,11 @@ permalink: list/projects.html
     $("#filterUnset").hide();
     $("#filterSet").show();
 
-    $(".card-project").hide()
+    $(".card-work").hide()
     $(".skill").removeClass("bg-success")
                 .addClass("bg-white")
                 .removeClass("text-white")
-    $(".card-project").each(function(idx, card) {
+    $(".card-work").each(function(idx, card) {
       var matches = $(card).find(".skill-" + skill)
       if (matches.length > 0) $(card).show()
     })
@@ -77,7 +77,7 @@ permalink: list/projects.html
     $("#filterUnset").show();
     $("#filterSet").hide();
       $("#currently-showing").hide()
-      $(".card-project").show()
+      $(".card-work").show()
       $(".skill").removeClass("bg-success")
                   .addClass("bg-white")
                   .removeClass("text-white")
