@@ -1,9 +1,11 @@
 ---
 title: Underscore Keys
+has_more: true
 tags:
   - Javascript
   - Params
 ---
+
 My elixir norms are all params are snakecase, yet in all my javascript code I use camelcase. Here's how I ensure any params are in the right format
 
 <!--more-->

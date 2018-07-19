@@ -21,7 +21,7 @@
 
 ### Gists
 - 001-underscore-keys : - Underscore Keys
-
+- 002-erlang-reliability : https://dockyard.com/blog/2018/07/18/all-for-reliability-reflections-on-the-erlang-thesis
 #### TODO
 - Timezone
 - Loggers with scope
@@ -49,4 +49,3 @@
 - html or json
 - date raw
 - time raw
-- https://dockyard.com/blog/2018/07/18/all-for-reliability-reflections-on-the-erlang-thesis

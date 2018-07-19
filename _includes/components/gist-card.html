@@ -2,7 +2,11 @@
   <div class="card-body px-0 pt-0">
     <div class="float-left">
       <h4 class="card-title">
-        <a href="{{ gist.url | absolute_url }}">{{ gist.title }}</a>
+        {% if gist.has_more %}
+          <a href="{{ gist.url | absolute_url }}">{{ gist.title }}</a>
+        {% else %}
+          {{ gist.title }}
+        {% endif %}
       </h4>
     </div>
     <div class="clearfix"></div>
@@ -18,9 +22,15 @@
         {% endfor %}
       </div>
     </div>
-    <div class="card-text mb-0">
-      {{ gist.excerpt }}
-    </div>
-    <a href="{{ gist.url | absolute_url }}">More...</a>
+    {% if gist.has_more %}
+      <div class="card-text mb-0">
+        {{ gist.excerpt }}
+      </div>
+      <a href="{{ gist.url | absolute_url }}">More...</a>
+    {% else %}
+      <div class="card-text mb-0">
+        {{ gist.content }}
+      </div>
+    {% endif %}
   </div>
 </div>
