@@ -1,6 +1,8 @@
 ### Posts
 - 2019-07-19-elixir-code-organization.md : Organize your code
 
+- JWT # 593ce70
+
 #### TODO
 - Ecto Domain Logic
 - Ecto Configuration
@@ -50,3 +52,4 @@
 - html or json
 - date raw
 - time raw
+- JS extend

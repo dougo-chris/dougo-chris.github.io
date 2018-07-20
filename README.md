@@ -3,19 +3,17 @@
 ./bin/serve
 ```
 
-# Friday Theme
-This site is based on the [Friday](https://github.com/sfreytag/friday-theme)
-
-
 ### Posts
+```
 ---
 title:  How to use Single Images
 tags:
   - Elixir
 ---
-
+```
 
 ### Gists
+```
 ---
 title: Gist 001
 tags:
@@ -23,7 +21,7 @@ tags:
   - G-02
   - G-03
 ---
-
+```
 
 ### Adding images
 ```
@@ -84,3 +82,7 @@ images:
   A clock icon in grey left-aligned
 </p>
 ```
+
+# Friday Theme
+This site is based on the [Friday](https://github.com/sfreytag/friday-theme)
+
