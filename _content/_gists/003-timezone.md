@@ -49,5 +49,4 @@ end
       timestamp -> timestamp
     end
   end
-
 ```
