@@ -25,6 +25,8 @@
 - 001-underscore-keys : - Underscore Keys
 - 002-erlang-reliability : https://dockyard.com/blog/2018/07/18/all-for-reliability-reflections-on-the-erlang-thesis
 - 003-timezone : - Timezone
+- 004-keys-to-atoms
+- 005-timestamp
 
 #### TODO
 - Loggers with scope
@@ -32,9 +34,8 @@
 - Backup to EC2
 - Restore from EC2
 - :priv path
-- params, convert keys to :atoms
 - ETS, new, lookup, insert
-- Plug.Static coode
+- Plug.Static code
 - TableLoader plug
 - Random String (:crypto.strong_rand_bytes, Base.encode16(case: :lower))
 - chageset_error_reason
