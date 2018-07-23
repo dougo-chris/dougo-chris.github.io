@@ -17,12 +17,17 @@ def project do
    version: app_version(),
 
 def app_version do
-  {version, 0} = System.cmd("git", ["describe",  "--tags"])
-  version = String.trim(version)
+  [version, _patch, commit_id] =
+    case System.cmd("git", ["describe",  "--tags"]) do
+      {tag, 0} ->
+        tag
+        |> String.trim
+        |> String.split("-")
 
-  {sha, 0} = System.cmd("git", ["rev-parse", "--short", "HEAD"])
-  sha = String.trim(sha)
+      _ ->
+        ["0.0.0", "", "UNKNOWN"]
+    end
 
-  "#{version}+ref-#{sha}"
+  "#{version}+ref-#{commit_id}"
 end
 ```
