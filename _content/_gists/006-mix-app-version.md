@@ -18,7 +18,7 @@ def project do
 
 def app_version do
   [version, _patch, commit_id] =
-    case System.cmd("git", ["describe",  "--tags"]) do
+    case System.cmd("git", ["describe", "--tags", "--long"]) do
       {tag, 0} ->
         tag
         |> String.trim
