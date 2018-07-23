@@ -1,6 +1,6 @@
 ---
 title: Timestamp
-has_more: false
+has_more: true
 tags:
   - Elixir
   - Erlang
@@ -8,6 +8,9 @@ tags:
 ---
 
 ### Convert a timestamp into a string
+
+<!--more-->
+
 ```
 def create_timestamp do
   { {year, month, day}, {hour, minute, second} } = :calendar.now_to_universal_time(:os.timestamp())
@@ -17,6 +20,3 @@ end
 ```
 
 From (https://github.com/cogini)[https://github.com/cogini/elixir-deploy-template/blob/master/lib/mix/tasks/deploy.ex]
-
-<!--more-->
-

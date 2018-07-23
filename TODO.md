@@ -4,6 +4,7 @@
 - JWT # 593ce70
 
 #### TODO
+- Release Process : https://gist.github.com/jswny/83e03537830b0d997924e8f1965d88bc
 - Ecto Domain Logic
 - Ecto Configuration
 - Webpack for Phoenix
