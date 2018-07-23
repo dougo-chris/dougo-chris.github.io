@@ -7,7 +7,7 @@ tags:
   - Date & Time
 ---
 
-### Convert a timestamp into a string
+Convert a timestamp into a string
 
 <!--more-->
 

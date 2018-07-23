@@ -6,7 +6,8 @@ tags:
   - Release
 ---
 
-### Convert a git tag and sha into a mix application version
+
+Convert a git tag and sha into a mix application version
 
 <!--more-->
 
