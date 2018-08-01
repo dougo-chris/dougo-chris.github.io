@@ -13,10 +13,10 @@ Here's a script I wrote to backup my MySQL database and upload to S3. It's. base
 I'm using Ecto and ExAws libraries as well as the following System ENV variables
 
 ```
-BACKUP_AWS_BUCKET
 BACKUP_DIRECTORY
 BACKUP_AWS_ACCESS_KEY_ID
 BACKUP_AWS_SECRET_ACCESS_KEY
+BACKUP_AWS_BUCKET
 ```
 
 The tasks are
@@ -26,6 +26,8 @@ myapp.mysql.backup    <- backup the database and upload to S3
 myapp.mysql.download  <- download the latest version from S3
 myapp.mysql.restore.  <- restore the latest version
 ```
+
+The code
 
 ```
 defmodule Mix.Tasks.MyApp.Mysql do
