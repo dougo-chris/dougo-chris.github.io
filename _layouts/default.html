@@ -17,10 +17,13 @@
   <div class="{{ container }}">
     <div class="row">
       <div class="d-none d-lg-block col-lg-2 col-xl-2 side">
-        {% include bars/side.html %}
+        {% include bars/left.html %}
       </div>
       <div class="col-md-12 col-lg-10 col-xl-8 pb-4 content">
         {{ content }}
+      </div>
+      <div class="d-none d-xl-block col-xl-2 side-right">
+        {% include bars/right.html %}
       </div>
       <div class="col-md-12 d-lg-none bottom">
         {% include bars/bottom.html %}

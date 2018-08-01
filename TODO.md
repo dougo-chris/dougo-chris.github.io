@@ -1,5 +1,6 @@
 ### Posts
 - 2019-07-19-elixir-code-organization.md : Organize your code
+- 2019-08-02-mysql-backup-to-s3
 
 - JWT # 593ce70
 

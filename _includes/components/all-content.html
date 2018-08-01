@@ -1,0 +1,7 @@
+{% for post in site.collections %}
+<div class="sticky-top space-before">
+  <h6 class="card-title">
+    <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
+  </h6>
+</div>
+{% endfor %}

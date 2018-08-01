@@ -20,3 +20,21 @@ end
 ```
 
 From (https://github.com/cogini)[https://github.com/cogini/elixir-deploy-template/blob/master/lib/mix/tasks/deploy.ex]
+
+### another option
+```
+  {:ok, dt} =
+    :seconds
+    |> :os.system_time()
+    |> DateTime.from_unix()
+
+  [
+    dt.year |> Integer.to_string() |> String.pad_leading(4, "0"),
+    dt.month |> Integer.to_string() |> String.pad_leading(2, "0"),
+    dt.day |> Integer.to_string() |> String.pad_leading(2, "0"),
+    dt.hour |> Integer.to_string() |> String.pad_leading(2, "0"),
+    dt.minute |> Integer.to_string() |> String.pad_leading(2, "0"),
+    dt.second |> Integer.to_string() |> String.pad_leading(2, "0")
+  ]
+  |> Enum.join("-")
+```
