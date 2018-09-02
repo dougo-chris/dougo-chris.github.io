@@ -2,7 +2,8 @@
 title: Convert string parameters to atoms
 has_more: true
 tags:
-  - Javascript
+  - Elixir
+  - Phoenix
   - Params
 ---
 

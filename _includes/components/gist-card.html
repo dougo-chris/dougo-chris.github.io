@@ -23,12 +23,10 @@
       </div>
     </div>
     <div class="card-text mb-0">
-      <p class="mb-0">
-        {{ gist.excerpt | strip_html }}
-        {% if gist.has_more %}
-          <a href="{{ gist.url | absolute_url }}" class="ml-1">more...</a>
-        {% endif %}
-      </p>
+      {{ gist.excerpt }}
+      {% if gist.has_more %}
+        <a href="{{ gist.url | absolute_url }}" class="more">more...</a>
+      {% endif %}
     </div>
   </div>
 </div>

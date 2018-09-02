@@ -92,3 +92,8 @@ h4 a:hover {
   text-decoration: none;
   border-bottom: solid 1px #505c70;
 }
+
+a.more {
+  position: relative;
+  top: -15px;
+}
